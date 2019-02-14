@@ -35,11 +35,12 @@ function addProjectDetails(e) {
 
 function addProject(result) {
 	console.log(result);
-	var projectHTML = 
-		'<img src="' + result.image + '"class="detailsImage">' +
-		'<h1>' + result.title + '</h1>' + 
-		'<p><small>' + result.date + '</small></p>'
-		'<p>' + result.summary + '</p>';
+	  var projectHTML = 
+	    '<img src="' + result['image'] + '" class="detailsImage">' +
+	    '<p>' + result['title'] + '</p>' +
+	    '<p><small>' + result['date'] +
+	    '</small></p>' + '<p>' + result['summary'] + 
+	    '</p>'; 
 
-	$("#project" + result.id + ".details").html(projectHTML);
+	$("#project" + result.id + " .details").html(projectHTML);
 }
